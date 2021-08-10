@@ -1,0 +1,10 @@
+@import './style//btn.wxss';
+
+.xpl {
+  color: green;
+  font-size: 20px;
+}
+
+.box1 {
+  color:  orange !important;
+}

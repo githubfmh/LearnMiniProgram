@@ -1,0 +1,30 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- 1. 设置样式的三种方式 -->
+<!-- 1. 行内(内联)样式 -->
+<view style='color: red; font-size: 20px'>
+  哈哈哈
+</view>
+
+<!-- 2. 页面样式 -->
+<view class='box'>小明明</view>
+
+<!-- 全局样式 -->
+<view class='xpl'>小胖龙</view>
+
+<!-- 2. 三种样式作用于同一个组件 -->
+<view style='color: red'
+      class='box1'>
+      想学习
+</view>
+
+<!-- 3. wxss中的单位: rpx -->
+<!-- 前端也需要进行配置尺寸的适配：em/rem/vw/vh -->
+<view class='box2'></view>
+<view class='box3'></view>
+
+<view class='content1'>臭小子</view>
+<view class='content2'>坏小子</view>
+
+<button class='btn'>按钮</button>
+
+<!-- 4. 使用官方样式库进行开发 -->

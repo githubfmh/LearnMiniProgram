@@ -1,0 +1,31 @@
+<!--pages/network/network.wxml-->
+
+<!-- 网络请求在js文件 -->
+
+<!-- 展示弹窗相关的操作 -->
+<view>展示弹窗相关的操作</view>
+<!-- 1. Toast -->
+<button size='mini' bind:tap='handleShowToast'>
+  ShowToast
+</button>
+
+<!-- 2. Modal -->
+<button size='mini' bind:tap='handleShowModal'>
+  showModal
+</button>
+
+<!-- 3. Loading -->
+<button size='mini' bind:tap='handleShowLoading'>
+  ShowLoading
+</button>
+
+<!-- 4. actionSheet -->
+<button size='mini' bind:tap='handleShowAction'>
+  actionSheet
+</button>
+
+<!-- 页面分享相关的操作 -->
+<view>页面分享相关的操作</view>
+
+<!-- 5. 分享按钮 -->
+<button size='mini' open-type='share'>分享</button>

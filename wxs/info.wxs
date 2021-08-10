@@ -1,0 +1,14 @@
+// JS 代码
+var message = "Hello World";
+var name = "coderwhy";
+
+var sum = function(num1, num2) {
+  return num1 + num2
+}
+
+// commonJS 的模块化导出的方法
+module.exports = {
+  message: message,
+  name: name,
+  sum: sum
+}

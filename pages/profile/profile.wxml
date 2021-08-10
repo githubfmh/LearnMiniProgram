@@ -17,4 +17,4 @@
 <open-data type="userNickName"></open-data>
 <open-data type="userAvatarUrl"></open-data>
 
-<view wx:for='{{list}}'>{{item.title}}</view>
+<view wx:for='{{list}}' wx:key='*this'>{{item.title}}</view>

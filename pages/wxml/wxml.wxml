@@ -1,0 +1,86 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- 1. wxml的格式 -->
+<view></view>
+<button ></button>
+
+<!-- 2. Mustache -->
+<view>{{message}}</view>
+<view>{{firstName}} {{lastName}}</view>
+<view>{{firstName + ' ' + lastName}}</view>
+<view>{{age >= 18 ? '成年人' : '未成年人'}}</view>
+<view class='box {{ isActive ? "active" : "" }}'>{{nowTime}}</view>
+<button bindtap='handleSwitchColor'>切换颜色</button>
+
+<view>------条件判断------</view>
+<!-- wx:if 的是使用 -->
+<button bindtap="hanldeSwitchShow">切换</button>
+<view wx:if="{{isShow}}">哈哈哈</view>
+
+<!-- wx:elif/wx:else -->
+<view>{{score}}</view>
+<button size='mini' bindtap='addScore'>分数递增6</button>
+<view wx:if="{{ score >= 90 }}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- hidden属性 -->
+<view wx:if="{{false}}">我是通过wx:if控制的内容</view>
+<view hidden="{{true}}">我是通过hidden控制的内容</view>
+
+<view>------列表渲染---------</view>
+<!-- 1. 遍历数组/字符串/数字 -->
+<!-- <view wx:for="{{['abc', 'cba', 'nba']}}">{{item}}-{{index}}</view>
+<view wx:for="coderwhy">{{item}}</view>
+<view wx:for="{{10}}">{{item}}</view> -->
+
+<!-- 2. block标签 -->
+<!-- <block wx:for="{{3}}">
+  <button>按钮</button>
+  <view>哈哈哈</view>
+  <text>我是内容</text>
+</block> -->
+
+<!-- 3. item、index 起名字 -->
+<!-- <view wx:for="{{movies}}" 
+      wx:for-item="movies"
+      wx:for-index="i">
+      {{movies}}-{{i}}
+</view>
+
+<block wx:for="{{nums}}" wx:for-item="nums_item">
+  <block wx:for="{{nums_item}}">
+    <view>{{item}}</view>
+  </block>
+</block> -->
+
+
+<!-- 4. key的作用 -->
+<!-- <view wx:for="{{letters}}" wx:key="*this">{{item}}</view> -->
+
+<view>-------template-------</view>
+<!-- 
+  之前的时候小程序不支持自定义组件，为了进行代码的复用： template
+ -->
+ <!-- 模板中包裹的内容，在没有被使用前，是不会进行任何的渲染 -->
+<!-- <template name='contentItem'>
+  <button size='mini'>{{btnText}}</button>
+  <view>{{content}}</view>
+</template> -->
+<!-- 结论：include是不可以导入模板 -->
+<!-- 
+  关于wxml的导入有两种方式：
+    import导入：
+      1. 主要是导入template
+      2. 特点：不能进行递归导入
+    include引入：
+      1. 将公共的wxml中的组件抽到一个文件中
+      2. 特点：不能导入template、wxs，可以进行递归导入
+ -->
+<import src="/wxml/template.wxml"/>
+
+<template is="contentItem" data="{{btnText: '按钮', content: '哈哈哈'}}"/>
+<template is="contentItem" data="{{btnText: '警告', content: '嘿嘿'}}"/>
+<template is="contentItem" data="{{btnText: '点击', content: 'Login'}}"/>
+
+<include src='/wxml/footer.wxml'/>

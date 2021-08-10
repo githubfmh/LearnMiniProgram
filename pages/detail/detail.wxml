@@ -1,0 +1,3 @@
+<!--pages/detail/detail.wxml-->
+<view>我是详情页</view>
+<button size='mini' bind:tap='handleBack' open-type="navigatetor">返回</button>

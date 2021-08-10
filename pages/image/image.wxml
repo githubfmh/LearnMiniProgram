@@ -1,0 +1,33 @@
+<!--pages/image/image.wxml-->
+
+<!-- 1. image的基本使用 -->
+<!-- 
+  重点
+    1. image组件可以写成单标签, 也可以写成双标签。
+    2. image组件默认有自己的大小 320x240。
+    3. iamge组件是一个行内块级元素。
+ -->
+
+<!-- <image/> -->
+
+<!-- 2. src: 本地地址(相对路径/绝对路径)/远程地址 -->
+<image src='../../assets/test/102.png'/>
+<image src='/assets/test/102.png'/>
+
+<!-- 补充： 相册中的图片 -->
+<image src="{{imagePath}}"/>
+<button bindtap='handleChooseAlbum'>
+  选中图片
+</button>
+
+<!-- 3. bindload: 监听图片加载完成 -->
+<!-- lazy-load: 图片懒加载 -->
+<image src='https://img0.baidu.com/it/u=3852092646,4148958519&fm=253&fmt=auto&app=120&f=GIF?w=300&h=300' 
+      bindload='handleImageLoad'
+      wx:for="{{1}}"
+      lazy-load/>
+
+<!-- 4. show-menu-by-longpress: 长按图片出现小程序码 -->
+<image src='/assets/test/102.png'
+       show-menu-by-longpress
+       mode="widthFix"/>

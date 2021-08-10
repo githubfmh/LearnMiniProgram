@@ -1,0 +1,32 @@
+<!--pages/router/router.wxml-->
+
+<!-- 1. navigator页面跳转 -->
+<navigator url="/pages/detail/detail">
+  <view>跳转到详情页</view>
+</navigator>
+
+<!-- 2. open-tyoe属性：open-type -->
+<navigator url='/pages/detail/detail'
+           open-type='redirect'>
+  <view>跳转到详情页(redirect)</view>
+</navigator>
+
+<navigator url='/pages/detail/detail'
+           open-type='switchTab'>
+  <view>跳转到详情页(switchTab)</view>
+</navigator>
+
+<navigator url='/pages/detail/detail'
+           open-type='reLaunch'>
+  <view>跳转到详情页(reLaunch)</view>
+</navigator>
+
+<!-- 3. 跳转过程中数据的传递 -->
+<navigator url='/pages/detail/detail?name=why&age=18&height=1.88'>
+  跳转
+</navigator>
+
+<view>{{title}}</view>
+
+<!-- 4. 通过代码进行页面跳转 -->
+<button size='mini' bind:tap='handlePushDetail'>跳转到详情页</button>

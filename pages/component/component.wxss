@@ -1,0 +1,23 @@
+/* pages/component/component.wxss */
+/* .title {
+  color: red;
+  font-size: 50rpx;
+  font-weight: 700;
+}
+
+.content {
+  font-size: 36rpx;
+  color: green;
+} */
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}

@@ -10,8 +10,13 @@
 
 <!-- 3.事件监听改变data -->
 <view>当前计数：{{counter}}</view>
+
 <button size='mini' 
-        bindtap="handleAddClick">+</button>
+        bindtap="handleAddClick">
+        +
+</button>
 <button size='mini' 
-        bindtap="handleSubClick">-</button>
+        bindtap="handleSubClick">
+        -
+</button>
  

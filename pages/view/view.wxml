@@ -1,0 +1,25 @@
+<!--pages/view/view.wxml-->
+
+<!-- 1. view的基本使用 -->
+<view>
+  <text class='box'>哈哈哈</text>
+  <text>ggg</text>
+</view>
+
+<!-- 2. hover-class: 当用户按下组件时，显示样式 -->
+<view class='hover'
+      hover-class='hover-view'
+      hover-stay-time="{{0}}">
+      hover-class
+</view>
+
+<!-- 3. hover-stop-propagation：阻止祖先组件的点击态 -->
+<view class='hover1'
+      hover-class="hover-view1">
+  <view class='hover2'
+      hover-class='hover-view2'
+      hover-stay-time="{{0}}"
+      hover-stop-propagation>
+      hover-class
+  </view>
+</view>
